@@ -1,0 +1,39 @@
+name: Release
+
+# Al empujar un tag con el número de versión (p.ej. 0.10.0), construye main.js,
+# corre los tests y crea el release de GitHub con los assets que Obsidian necesita.
+on:
+  push:
+    tags:
+      - "*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build main.js desde src/
+        run: node src/build.js
+
+      - name: Tests
+        run: |
+          node src/test/run.js
+          node src/test/i18n.js
+
+      - name: Crear release con los assets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$TAG" \
+            main.js manifest.json styles.css \
+            --title "$TAG" \
+            --notes "MarkCalc $TAG — ver CHANGELOG.md"

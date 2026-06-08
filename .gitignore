@@ -1,0 +1,16 @@
+# Backups generados durante el desarrollo
+main.js.bak*
+
+# SO / editor
+.DS_Store
+Thumbs.db
+node_modules/
+
+# Cualquier backup
+*.bak
+
+# Ajustes locales del plugin (no distribuir)
+data.json
+
+# helper local de publicación
+publish.sh

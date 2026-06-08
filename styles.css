@@ -1,0 +1,61 @@
+/* MarkCalc — estilos de las ayudas del editor (autocompletado + hover). */
+
+/* Filas del autocompletado contextual */
+.markcalc-sugg .mc-sg-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+}
+.markcalc-sugg .mc-sg-name {
+  font-family: var(--font-monospace);
+  font-weight: 600;
+}
+.markcalc-sugg .mc-sg-grp {
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-accent);
+  opacity: 0.85;
+}
+.markcalc-sugg .mc-sg-desc {
+  font-size: 0.85em;
+  color: var(--text-muted);
+  margin-top: 0.1em;
+}
+.markcalc-sugg .mc-sg-ex {
+  font-family: var(--font-monospace);
+  font-size: 0.8em;
+  color: var(--text-faint);
+  margin-top: 0.15em;
+}
+
+/* Ficha flotante del hover */
+.markcalc-info {
+  max-width: 30em;
+  padding: 0.5em 0.7em;
+  line-height: 1.45;
+}
+.markcalc-info .mc-sig {
+  font-family: var(--font-monospace);
+  font-weight: 600;
+  margin-bottom: 0.15em;
+}
+.markcalc-info .mc-grp {
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-accent);
+  margin-bottom: 0.3em;
+}
+.markcalc-info .mc-desc {
+  font-size: 0.9em;
+  margin-bottom: 0.3em;
+}
+.markcalc-info .mc-ex {
+  font-family: var(--font-monospace);
+  font-size: 0.82em;
+  color: var(--text-muted);
+  background: var(--background-secondary);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}

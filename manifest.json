@@ -1,0 +1,11 @@
+{
+  "id": "markcalc",
+  "name": "MarkCalc",
+  "version": "0.10.0",
+  "minAppVersion": "0.12.0",
+  "description": "Spreadsheet-style formulas in Markdown tables. Results live as plain, portable text, not a rendered view. Aggregates, lookups, dates, custom functions, and cross-note references with automatic recalculation.",
+  "author": "Levis-Code",
+  "authorUrl": "https://github.com/Levis-Code",
+  "fundingUrl": "https://www.buymeacoffee.com/leviscodeup",
+  "isDesktopOnly": false
+}
